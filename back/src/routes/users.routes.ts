@@ -25,10 +25,9 @@ usersRoutes.post(
 
 usersRoutes.get("", ensureAuthMiddleware, getUsersController);
 usersRoutes.get(
-  "/:id",
+  "/profile",
   ensureAuthMiddleware,
   ensureUserExistsMiddleware,
-  ensureIsOwnerMiddleware,
   retiveUserController
 );
 usersRoutes.patch(

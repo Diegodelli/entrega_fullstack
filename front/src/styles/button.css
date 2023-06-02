@@ -1,0 +1,30 @@
+.buttonDefault {
+  display: flex;
+  align-items: center;
+
+  height: var(--btn-height2);
+  padding: 0 1rem;
+
+  background-color: var(--gray-scale-2);
+  color: var(--gray-scale-5);
+
+  font-weight: var(--weigth-medium);
+  letter-spacing: 1px;
+
+  border: none;
+  border-radius: var(--border-radius);
+
+  cursor: pointer;
+}
+
+.close__modal {
+  background-color: transparent;
+  color: var(--gray-scale-4);
+
+  font-size: var(--title-size2);
+  font-weight: var(-weigth-semiBold);
+
+  border: none;
+
+  cursor: pointer;
+}
