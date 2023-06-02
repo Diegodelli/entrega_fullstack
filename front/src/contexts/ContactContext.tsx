@@ -48,7 +48,7 @@ export const ContactProvider = ({ children }: iContactProviderProps) => {
 
       setModalContact(false);
     } catch (err) {
-      toast.error("Ops, algo deu errado. Revise os campos!", {
+      toast.error(`${err.message}`, {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
