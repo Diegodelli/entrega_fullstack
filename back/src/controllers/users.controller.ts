@@ -30,7 +30,9 @@ const getUsersController = async (req: Request, res: Response) => {
 };
 
 const retiveUserController = async (req: Request, res: Response) => {
-  const getUser: IUserResponse = await retriveUserService(req.params.id);
+  const userId = res.locals.user.id;
+
+  const getUser: IUserResponse = await retriveUserService(userId);
 
   return res.json(getUser);
 };

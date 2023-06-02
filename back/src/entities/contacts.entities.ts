@@ -16,7 +16,7 @@ export class Contacts {
   @Column({ length: 50 })
   fullname: string;
 
-  @Column({ unique: true, length: 50 })
+  @Column({ length: 50 })
   email: string;
 
   @Column({ length: 12 })

@@ -21,6 +21,7 @@ export const listContactsService = async (
 
   const contacts = await contactsRepository.find({
     where: {
+      isActive: true,
       user: {
         id: userId,
       },
