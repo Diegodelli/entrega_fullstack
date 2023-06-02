@@ -13,7 +13,6 @@ import {
 } from "../schemas/users.schema";
 import { ensureAuthMiddleware } from "../middlewares/ensureAuth.middleware";
 import { ensureIsOwnerMiddleware } from "../middlewares/ensureIsOwner.middleware";
-import { ensureUserExistsMiddleware } from "../middlewares/ensureUserExists.middleware";
 
 const usersRoutes = Router();
 
@@ -24,25 +23,17 @@ usersRoutes.post(
 );
 
 usersRoutes.get("", ensureAuthMiddleware, getUsersController);
-usersRoutes.get(
-  "/:id",
-  ensureAuthMiddleware,
-  ensureUserExistsMiddleware,
-  ensureIsOwnerMiddleware,
-  retiveUserController
-);
+usersRoutes.get("/profile", ensureAuthMiddleware, retiveUserController);
 usersRoutes.patch(
   "/:id",
-  ensureDataIsValidMiddleware(userSchamaUpadateRequest),
   ensureAuthMiddleware,
-  ensureUserExistsMiddleware,
+  ensureDataIsValidMiddleware(userSchamaUpadateRequest),
   ensureIsOwnerMiddleware,
   upadateUserController
 );
 usersRoutes.delete(
   "/:id",
   ensureAuthMiddleware,
-  ensureUserExistsMiddleware,
   ensureIsOwnerMiddleware,
   deleteUserController
 );

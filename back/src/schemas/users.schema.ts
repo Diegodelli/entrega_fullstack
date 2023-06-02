@@ -6,7 +6,7 @@ const userSchema = z.object({
   email: z.string().email(),
   password: z.string(),
   telephone: z.string(),
-  isAdm: z.boolean(),
+  isAdm: z.boolean().default(false),
   isActive: z.boolean(),
   createdAt: z.date(),
   updatedAt: z.date(),
@@ -14,7 +14,6 @@ const userSchema = z.object({
 
 const userSchemaRequest = userSchema.omit({
   id: true,
-  isAdm: true,
   isActive: true,
   createdAt: true,
   updatedAt: true,

@@ -27,7 +27,9 @@ const listContactsController = async (req: Request, res: Response) => {
 };
 
 const retriveContactsController = async (req: Request, res: Response) => {
-  const contact = await retriveContactService(req.params.id);
+  const userId = req.params.id;
+
+  const contact = await retriveContactService(userId);
 
   return res.json(contact);
 };

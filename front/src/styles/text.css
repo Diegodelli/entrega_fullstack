@@ -1,0 +1,28 @@
+.titleForm {
+  font-weight: 700;
+  font-size: var(--title-size2);
+  line-height: 28px;
+  letter-spacing: 1px;
+
+  color: var(--gray-scale-5);
+}
+
+.textLabel {
+  font-size: var(--text-size2);
+  color: var(--gray-scale-5);
+  margin-bottom: -1rem;
+}
+
+.spanForm {
+  font-size: var(--text-size2);
+  text-align: center;
+
+  color: var(--gray-scale-4);
+}
+
+.title__Modal {
+  font-weight: var(--weigth-bold);
+  font-size: var(--text-size1);
+
+  letter-spacing: 1px;
+}

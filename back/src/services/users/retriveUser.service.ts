@@ -8,6 +8,5 @@ export const retriveUserService = async (
 ): Promise<IUserResponse> => {
   const userRepository = AppDataSource.getRepository(User);
   const user = await userRepository.findOneBy({ id: userId });
-
   return userSchemaResponse.parse(user);
 };
